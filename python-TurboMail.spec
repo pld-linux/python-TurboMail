@@ -2,6 +2,7 @@
 %define	module	TurboMail
 
 Summary:	Multi-threaded mail queue manager for TurboGears applications
+Summary(pl):	Wielow±tkowy zarz±dca kolejki pocztowej dla aplikacji TurboGears
 Name:		python-TurboMail
 Version:	2.0
 Release:	1
@@ -10,20 +11,28 @@ Group:		Development/Languages/Python
 Source0:	http://cheeseshop.python.org/packages/source/T/TurboMail/TurboMail-%{version}.tar.gz
 # Source0-md5:	c1b480702e3a76964fda8c3662e0c915
 URL:		http://www.topfloor.ca/turbomail/
-%pyrequires_eq	python
+BuildRequires:	python-TurboGears
 BuildRequires:	python-devel
 BuildRequires:	python-setuptools >= 0.6a9
-BuildRequires:	python-TurboGears
+BuildRequires:	rpm-pythonprov
 BuildRequires:	unzip
+%pyrequires_eq	python-modules
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-TurboMail is a TurboGears extension - meaning that it starts up and shuts down
-alongside TurboGears applications you write in the same way that visit tracking
-and identity do. TurboMail uses built-in Python modules for SMTP communication
-and MIME e-mail creation, but greatly simplifies these tasks by performing the
-grunt-work for you.
+TurboMail is a TurboGears extension - meaning that it starts up and
+shuts down alongside TurboGears applications you write in the same way
+that visit tracking and identity do. TurboMail uses built-in Python
+modules for SMTP communication and MIME e-mail creation, but greatly
+simplifies these tasks by performing the grunt-work for you.
+
+%description -l pl
+TurboMail to rozszerzenie TurboGears - co oznacza, ¿e uruchamia siê i
+zatrzymuje wraz z aplikacjami TurboGears. TurboMail wykorzystuje
+modu³y wbudowane w Pythona do komunikacji SMTP i tworzenia przesy³ek
+MIME, ale znacznie upraszcza te zadania wykonuj±c za programistê
+znaczn± czê¶æ pracy.
 
 %prep
 %setup -q -n %{module}-%{version}

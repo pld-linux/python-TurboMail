@@ -2,7 +2,7 @@
 %define	module	TurboMail
 
 Summary:	Multi-threaded mail queue manager for TurboGears applications
-Summary(pl.UTF-8):   Wielowątkowy zarządca kolejki pocztowej dla aplikacji TurboGears
+Summary(pl.UTF-8):	Wielowątkowy zarządca kolejki pocztowej dla aplikacji TurboGears
 Name:		python-TurboMail
 Version:	2.0
 Release:	1

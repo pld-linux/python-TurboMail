@@ -11,6 +11,7 @@ Group:		Development/Languages/Python
 Source0:	http://cheeseshop.python.org/packages/source/T/TurboMail/TurboMail-%{version}.tar.gz
 # Source0-md5:	c1b480702e3a76964fda8c3662e0c915
 URL:		http://www.topfloor.ca/turbomail/
+BuildRequires:	rpmbuild(macros) >= 1.710
 BuildRequires:	python-TurboGears
 BuildRequires:	python-devel
 BuildRequires:	python-setuptools >= 0.6a9
